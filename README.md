@@ -15,6 +15,6 @@ Contribute your Flowgorithm programs or improve existing ones:
 
 ## License 📄
 
-This repo is MIT-licensed for personal/educational use. See [LICENSE](LICENSE). 📜
+This repo is MIT-licensed for personal/educational use. See [LICENSE]([LICENSE](https://github.com/aloukikjoshi/Flowgorithm-Practice-Playground/blob/main/LICENSE)https://github.com/aloukikjoshi/Flowgorithm-Practice-Playground/blob/main/LICENSE). 📜
 
 Happy coding and exploring algorithms with Flowgorithm! 🌟
