@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ankit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-19 07:48:54 AM"/>
+        <attribute name="created" value="YW5raXQ7TVNJOzIwMjMtMDEtMTg7MDM6NTY6MTUgUE07MjA0OQ=="/>
+        <attribute name="edited" value="YW5raXQ7TVNJOzIwMjMtMDEtMTg7MTA6MDc6MzAgUE07MTE7MjE5Nw=="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTE5OzA3OjQ4OjU0IEFNOzU7MjczMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of array&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="key, mid, begin, end, i, j, temp" type="Integer" array="False" size=""/>
+            <assign variable="temp" expression="0"/>
+            <output expression="&quot;Enter the numbers in array&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="j" expression="i+1"/>
+                <while expression="j&lt;n">
+                    <if expression="a[i]&gt;a[j]">
+                        <then>
+                            <assign variable="temp" expression="a[i]"/>
+                            <assign variable="a[i]" expression="a[j]"/>
+                            <assign variable="a[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j+1"/>
+                </while>
+            </for>
+            <output expression="&quot;Array elements in ascending order are&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <output expression="&quot;Enter the number to be searched&quot;" newline="True"/>
+            <input variable="key"/>
+            <assign variable="begin" expression="0"/>
+            <assign variable="end" expression="n-1"/>
+            <while expression="begin&lt;=end">
+                <assign variable="mid" expression="(begin+end)/2"/>
+                <if expression="key=a[mid]">
+                    <then>
+                        <output expression="&quot;Key found and location is a[&quot;&amp;mid&amp;&quot;]&quot;" newline="True"/>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else>
+                        <if expression="key&lt;a[mid]">
+                            <then>
+                                <for variable="i" start="0" end="mid-1" direction="inc" step="1">
+                                    <assign variable="mid" expression="(0+(mid-1))/2"/>
+                                    <if expression="key==a[i]">
+                                        <then>
+                                            <output expression="&quot;Key found and location is a[&quot;&amp;mid&amp;&quot;]&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </for>
+                            </then>
+                            <else>
+                                <if expression="key&gt;a[mid]">
+                                    <then>
+                                        <for variable="i" start="mid+1" end="end" direction="inc" step="1">
+                                            <assign variable="mid" expression="((mid+1)+end)/2"/>
+                                            <if expression="key==a[i]">
+                                                <then>
+                                                    <output expression="&quot;Key found and location is a[&quot;&amp;mid&amp;&quot;]&quot;" newline="True"/>
+                                                    <breakpoint expression="" always="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </for>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="begin" expression="begin+1"/>
+            </while>
+            <output expression="&quot;Key not found&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

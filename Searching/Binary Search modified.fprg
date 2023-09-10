@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="prajw"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-18 04:11:58 PM"/>
+        <attribute name="created" value="cHJhanc7REVTS1RPUC00RERWTks2OzIwMjMtMDEtMTE7MDM6MDk6NTYgUE07Mjg4OQ=="/>
+        <attribute name="edited" value="cHJhanc7REVTS1RPUC00RERWTks2OzIwMjMtMDEtMTE7MDM6MTM6MzIgUE07MTtOLnlhc3dhbnRoIFJlZGR5O1lBU1dBTlRILVJFRERZOzIwMjMtMDEtMTA7MDI6NTg6MTkgUE07YmluYXJ5X3NlYXJjaFsxXS5mcHJnOzkwNDU="/>
+        <attribute name="edited" value="cHJhanc7REVTS1RPUC00RERWTks2OzIwMjMtMDEtMTE7MDM6NTU6NTggUE07MjszMDAx"/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTE4OzA0OjExOjU4IFBNOzE7MjczMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="7"/>
+            <declare name="i, b, c, d, j, f, x" type="Integer" array="False" size=""/>
+            <assign variable="d" expression="0"/>
+            <output expression="&quot;ENTER 7 ELEMENTS&quot;" newline="True"/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;ENTER THE ELEMENT TO BE SEARCHED&quot;" newline="True"/>
+            <input variable="f"/>
+            <comment text="arrangement of ascending order (start)"/>
+            <assign variable="i" expression="0"/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <assign variable="j" expression="i+1"/>
+                <if expression="j&lt;6">
+                    <then>
+                        <if expression="a[i]&gt;a[j]">
+                            <then>
+                                <assign variable="d" expression="a[i]"/>
+                                <assign variable="a[i]" expression="a[j]"/>
+                                <assign variable="a[j]" expression="d"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="j" expression="j+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;THE ASCENDING ORDER OF ELEMENTS IS&quot;" newline="True"/>
+            <comment text="arranged in ascending order (stop)"/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <comment text="yaha se asli search chalu kara hai"/>
+            <assign variable="x" expression="6+0/2"/>
+            <if expression="a[x]==f">
+                <then>
+                    <output expression="&quot;THE ELEMENT IS IN THE LOCATION &quot;&amp;a[x]" newline="True"/>
+                </then>
+                <else>
+                    <if expression="f&lt;a[x]">
+                        <then>
+                            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                                <if expression="a[i]==f">
+                                    <then>
+                                        <output expression="&quot;THE ELEMENT IS IN THE LOCATION &quot;&amp;a[i]" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </for>
+                        </then>
+                        <else>
+                            <if expression="f&gt;a[x]">
+                                <then>
+                                    <for variable="i" start="x" end="6" direction="inc" step="1">
+                                        <if expression="a[i]==f">
+                                            <then>
+                                                <output expression="&quot;THE ELEMENT IS IN THE LOCATION &quot;&amp;a[i]" newline="True"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </for>
+                                </then>
+                                <else>
+                                    <output expression="&quot;INVALID ELEMENT, ENTER ELEMENT WITHIN ARRAY&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-27 09:40:49 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNjswNDoyNzowOCBQTTsyNzM2"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNjswNDozNDowMSBQTTsxOzI4MzU="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIyLTEyLTI3OzA5OjQwOjQ5IFBNOzI7Mjc0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, y" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <input variable="n"/>
+            <output expression="&quot;Multiplication table of &quot;&amp;n&amp;&quot; is&quot;" newline="True"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <assign variable="y" expression="n*i"/>
+                <output expression="n&amp;&quot;x&quot;&amp;i&amp;&quot;=&quot;&amp;y" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

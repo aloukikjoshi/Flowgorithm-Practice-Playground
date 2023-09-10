@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-04 03:28:15 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTA0OzAzOjA0OjA5IFBNOzI2MTc="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTA0OzAzOjI4OjE1IFBNOzE7MjcyOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the number&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="i" expression="number%2"/>
+            <if expression="i==0">
+                <then>
+                    <output expression="&quot;The number is an even number.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The number is not an even number.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

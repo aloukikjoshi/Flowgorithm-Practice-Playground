@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-13 10:33:28 AM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTEzOzEwOjE3OjQ5IEFNOzI2MDg="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTEzOzEwOjE3OjU1IEFNOzE7YW5raXQ7TVNJOzIwMjMtMDEtMTM7MDg6NTc6MzMgQU07c3VtIG9mIDIgYXJyYXlzLmZwcmc7NjcwMQ=="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTEzOzEwOjMzOjI4IEFNOzE7MjcxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="True" size="n"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="Product" type="Integer" array="True" size="n"/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter a[i]&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;enter b[j]&quot;" newline="True"/>
+            <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                <input variable="b[j]"/>
+            </for>
+            <output expression="&quot;The product of respective elements of the given arrays is&quot;" newline="True"/>
+            <for variable="k" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="i" expression="k"/>
+                <assign variable="j" expression="i"/>
+                <assign variable="product[k]" expression="a[i]*b[j]"/>
+                <output expression="product[k]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

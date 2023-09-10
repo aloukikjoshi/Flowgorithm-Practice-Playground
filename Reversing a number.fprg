@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-21 04:39:05 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAzLTIxOzA0OjI4OjU3IFBNOzI2Mjg="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAzLTIxOzA0OjM5OjA1IFBNOzE7MjczMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, reverse" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number to be reverse.&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="reverse" expression="0"/>
+            <while expression="number&gt;=1">
+                <assign variable="reverse" expression="(reverse*10)+(number%10)"/>
+                <assign variable="number" expression="number/10"/>
+            </while>
+            <output expression="&quot;The reverse of the number is &quot;&amp;reverse" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

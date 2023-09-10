@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-18 09:44:24 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIyLTEyLTE4OzA4OjQ4OjA0IFBNOzI2MzE="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIyLTEyLTE4OzA5OjQ0OjI0IFBNOzI7MjczOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="0" direction="inc" step="1">
+                <input variable="i"/>
+                <output expression="&quot;Monday&quot;" newline="True"/>
+            </for>
+            <for variable="i" start="1" end="1" direction="inc" step="1">
+                <input variable="i"/>
+                <output expression="&quot;Tuesday&quot;" newline="True"/>
+            </for>
+            <for variable="i" start="2" end="2" direction="inc" step="1">
+                <input variable="i"/>
+                <output expression="&quot;Wednessday&quot;" newline="True"/>
+            </for>
+            <for variable="i" start="3" end="3" direction="inc" step="1">
+                <input variable="i"/>
+                <output expression="&quot;Thursday&quot;" newline="True"/>
+            </for>
+            <for variable="i" start="4" end="4" direction="inc" step="1">
+                <input variable="i"/>
+                <output expression="&quot;Friday&quot;" newline="True"/>
+            </for>
+            <for variable="i" start="5" end="5" direction="inc" step="1">
+                <input variable="i"/>
+                <output expression="&quot;Saturday&quot;" newline="True"/>
+            </for>
+            <for variable="I" start="6" end="6" direction="inc" step="1">
+                <input variable="I"/>
+                <output expression="&quot;Sunday&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

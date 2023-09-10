@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-01 02:59:16 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTAxOzAyOjQ5OjQzIFBNOzI2MjE="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTAxOzAyOjUwOjIyIFBNOzE7YW5raXQ7TVNJOzIwMjMtMDEtMzA7MTI6MzY6MjQgQU07QXNzaWdubWVudCBGZWItUTEgKE1lcmdpbmcgdHdvIGFycmF5cyBhbmQgdGhlbiBzb3J0aW5nKS5mcHJnOzEwMzY2"/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTAxOzAyOjUyOjIwIFBNOzE7QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTE5OzA2OjQ4OjU5IFBNO0JpbmFyeSBTZWFyY2goUmVhbCkuZnByZzs3NjY0"/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTAxOzAyOjU5OjE2IFBNOzE7MjczMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, temp, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of array&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <output expression="&quot;Enter the numbers in array&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <assign variable="temp" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="j" expression="i+1"/>
+                <while expression="j&lt;n">
+                    <if expression="a[i]&gt;a[j]">
+                        <then>
+                            <assign variable="temp" expression="a[i]"/>
+                            <assign variable="a[i]" expression="a[j]"/>
+                            <assign variable="a[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j+1"/>
+                </while>
+            </for>
+            <output expression="&quot;Array elements in ascending order are&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

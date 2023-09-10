@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="vamsidhar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-25 01:43:52 PM"/>
+        <attribute name="created" value="dmFtc2lkaGFyO0xBUFRPUC1LUURSMkFHNDsyMDIzLTAxLTA0OzAzOjA1OjU4IFBNOzMyODk="/>
+        <attribute name="edited" value="dmFtc2lkaGFyO0xBUFRPUC1LUURSMkFHNDsyMDIzLTAxLTIyOzA2OjI4OjU4IFBNOzc7MzQxMQ=="/>
+        <attribute name="edited" value="bW9oYW07TEFQVE9QLThQNFBIQVVROzIwMjMtMDEtMjU7MDE6NDM6NTIgUE07MTsyOTky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, a" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <call expression="bin(n)"/>
+        </body>
+    </function>
+    <function name="bin" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="a, i, c" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <while expression="n&gt;0">
+                <assign variable="c" expression="n%2"/>
+                <assign variable="a" expression="a+(c*i)"/>
+                <assign variable="n" expression="n/2"/>
+                <assign variable="i" expression="i*10"/>
+            </while>
+            <output expression="a" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

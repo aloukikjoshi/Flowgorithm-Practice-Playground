@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-21 04:59:03 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAzLTIxOzA0OjQ3OjAzIFBNOzI2MjA="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAzLTIxOzA0OjU5OjAzIFBNOzE7MjczMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, reverse, temp" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number which has to be checked, that whether it is palindrome or not&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="reverse" expression="0"/>
+            <assign variable="temp" expression="number"/>
+            <while expression="number&gt;=1">
+                <assign variable="reverse" expression="(reverse*10)+(number%10)"/>
+                <assign variable="number" expression="number/10"/>
+            </while>
+            <output expression="&quot;The reverse of the number is &quot;&amp;reverse" newline="True"/>
+            <if expression="temp==reverse">
+                <then>
+                    <output expression="&quot;The given number is palindrome.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The given number is not palindrome.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

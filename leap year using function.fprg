@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ankit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-25 02:06:58 PM"/>
+        <attribute name="created" value="YW5raXQ7TVNJOzIwMjMtMDEtMjU7MDg6NTc6MTIgQU07MjAzNQ=="/>
+        <attribute name="edited" value="YW5raXQ7TVNJOzIwMjMtMDEtMjU7MDk6NTg6MjkgQU07MTsyMTUz"/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTI1OzAyOjA2OjU4IFBNOzE7MjczMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <input variable="year"/>
+            <output expression="leap(year)" newline="True"/>
+        </body>
+    </function>
+    <function name="leap" type="Boolean" variable="leap">
+        <parameters>
+            <parameter name="year" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="leap" type="Boolean" array="False" size=""/>
+            <if expression="year%100==0">
+                <then>
+                    <if expression="year%400==0">
+                        <then>
+                            <assign variable="leap" expression="true"/>
+                        </then>
+                        <else>
+                            <assign variable="leap" expression="false"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="year%4==0">
+                        <then>
+                            <assign variable="leap" expression="true"/>
+                        </then>
+                        <else>
+                            <assign variable="leap" expression="false"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

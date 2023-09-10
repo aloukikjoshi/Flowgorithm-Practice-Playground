@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-04 03:04:00 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTA0OzAyOjM4OjA4IFBNOzI2MjI="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTA0OzAzOjA0OjAwIFBNOzE7MjcxNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, temperature, celsius, fahrenheit" type="Integer" array="False" size=""/>
+            <output expression="&quot;Press 1 for converting Fahrenheit to Celsius&quot;" newline="True"/>
+            <output expression="&quot;Pres any integer other than 1 for converting Celsius to Fahrenheit&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter Temperature&quot;" newline="True"/>
+            <input variable="temperature"/>
+            <if expression="a=1">
+                <then>
+                    <assign variable="celsius" expression="(5/9)*(temperature-32)"/>
+                    <output expression="&quot;The temperature in Celsius is &quot;&amp;celsius" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="fahrenheit" expression="(9/5)*temperature+32"/>
+                    <output expression="&quot;The temperature in Fahrenheit is &quot;&amp;fahrenheit" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

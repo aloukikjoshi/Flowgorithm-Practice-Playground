@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ankit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-15 11:16:37 PM"/>
+        <attribute name="created" value="YW5raXQ7TVNJOzIwMjMtMDEtMTU7MTE6MTA6MTkgUE07MjAzOQ=="/>
+        <attribute name="edited" value="YW5raXQ7TVNJOzIwMjMtMDEtMTU7MTE6MTY6MzcgUE07MzsyMTU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="10"/>
+            <declare name="i, n, c" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="a[i]" expression="i+1"/>
+                <assign variable="c" expression="n*a[i]"/>
+                <output expression="n&amp;&quot;*&quot;&amp;a[i]&amp;&quot; = &quot;&amp;c" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-12 10:41:21 AM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTA0LTEyOzEwOjM2OjM2IEFNOzI2MDc="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTA0LTEyOzEwOjQxOjIxIEFNOzE7MjcwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number1, number2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the two numbers.&quot;" newline="True"/>
+            <input variable="number1"/>
+            <input variable="number2"/>
+            <while expression="number2 != 0">
+                <if expression="number1 &gt; number2">
+                    <then>
+                        <assign variable="number1" expression="number1 - number2"/>
+                    </then>
+                    <else>
+                        <assign variable="number2" expression="number2-number1"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;The GCD of given two numbers is &quot;&amp;number1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

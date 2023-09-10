@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-18 04:05:19 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTE4OzAzOjE1OjE3IFBNOzI2MjM="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTE4OzA0OjA1OjE5IFBNOzE7MjczMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="True" size="5"/>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <declare name="status" type="Integer" array="False" size=""/>
+            <assign variable="status" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;THE ELEMENTS OF THE ARRAY ARE&quot;" newline="True"/>
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <declare name="key" type="Integer" array="False" size=""/>
+            <input variable="key"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <if expression="a[i]==key">
+                    <then>
+                        <output expression="&quot;KEY FOUND AT THE LOCATION&quot;&amp;i" newline="True"/>
+                        <assign variable="status" expression="1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="status==1">
+                <then>
+                    <output expression="&quot;KEY DOES NOT EXIST IN THE GIVEN ARRAY&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 10:44:42 AM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTA0OzAzOjQ1OjU0IFBNOzI2MjI="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTE3OzEwOjQ0OjQyIEFNOzQ7MjcxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, root1, root2, D" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the coefficients of the quadratic equation ax^2+bx+c=0.&quot;" newline="True"/>
+            <output expression="&quot;Enter a&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter b&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Enter c&quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="D" expression="(b^2-4*a*c)^1/2"/>
+            <assign variable="root1" expression="(-b+D)/2*a"/>
+            <assign variable="root2" expression="(b+D)/2*a"/>
+            <output expression="root1&amp;&quot; and &quot;&amp;root2&amp; &quot; are the roots of the quadratic equation.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

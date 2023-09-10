@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 10:21:53 AM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNjswNDozNDoxMCBQTTsyNzI3"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNjswNDozOTowMSBQTTsxOzI4NDA="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTE3OzEwOjIxOjUzIEFNOzE7MjcxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, sum, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of numbers to find the sum.&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="sum" expression="0"/>
+            <output expression="&quot;First five odd natural numbers are&quot;" newline="True"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="2">
+                <output expression="i" newline="True"/>
+                <assign variable="sum" expression="sum+i"/>
+            </for>
+            <output expression="&quot;The sum is &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

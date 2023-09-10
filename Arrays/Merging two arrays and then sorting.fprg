@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ankit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 10:29:24 AM"/>
+        <attribute name="created" value="YW5raXQ7TVNJOzIwMjMtMDEtMzA7MTI6MzY6MjQgQU07MjAyNg=="/>
+        <attribute name="edited" value="YW5raXQ7TVNJOzIwMjMtMDEtMzA7MDE6MDY6MzQgQU07MTsyMTMw"/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTE3OzEwOjI5OjI0IEFNOzc7MjcyMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, m, i, j, k" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of first array&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Enter size of second array&quot;" newline="True"/>
+            <input variable="m"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="b" type="Integer" array="True" size="m"/>
+            <declare name="c" type="Integer" array="True" size="(m+n)"/>
+            <output expression="&quot;Enter elements of first array&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;Enter elements of second array&quot;" newline="True"/>
+            <for variable="j" start="0" end="m-1" direction="inc" step="1">
+                <input variable="b[j]"/>
+            </for>
+            <output expression="&quot;Elements of third array are&quot;" newline="True"/>
+            <comment text="merging"/>
+            <assign variable="k" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="c[k]" expression="a[i]"/>
+                <output expression="a[i]" newline="True"/>
+                <assign variable="k" expression="k+1"/>
+            </for>
+            <assign variable="k" expression="n"/>
+            <comment text="Instead of m, j can also be used"/>
+            <for variable="j" start="m-1" end="0" direction="dec" step="1">
+                <assign variable="c[k]" expression="b[j]"/>
+                <output expression="b[j]" newline="True"/>
+                <assign variable="k" expression="k+1"/>
+            </for>
+            <comment text="Sorting using bubble sort"/>
+            <declare name="temp, h" type="Integer" array="False" size=""/>
+            <assign variable="temp" expression="0"/>
+            <for variable="k" start="0" end="(m+n)-1" direction="inc" step="1">
+                <assign variable="h" expression="k+1"/>
+                <while expression="h&lt;(m+n)">
+                    <if expression="c[k]&gt;c[h]">
+                        <then>
+                            <assign variable="temp" expression="c[k]"/>
+                            <assign variable="c[k]" expression="c[h]"/>
+                            <assign variable="c[h]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="h" expression="h+1"/>
+                </while>
+            </for>
+            <output expression="&quot;Sorted elements of array are&quot;" newline="True"/>
+            <for variable="k" start="0" end="(m+n)-1" direction="inc" step="1">
+                <output expression="c[k]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

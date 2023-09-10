@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-04 03:45:40 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTA0OzAzOjI4OjI2IFBNOzI2MjI="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTA0OzAzOjQ1OjQwIFBNOzE7MjcyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, i, counter" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter a natural number greater than 1&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="counter" expression="0"/>
+            <for variable="i" start="1" end="number" direction="inc" step="1">
+                <if expression="number%i=0">
+                    <then>
+                        <assign variable="counter" expression="counter+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="counter==2">
+                <then>
+                    <output expression="&quot;The number is a prime number.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The number is not a prime number.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

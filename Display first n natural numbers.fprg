@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 10:31:58 AM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIyLTEyLTIxOzAzOjM3OjU2IFBNOzI2MjU="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTE3OzEwOjMxOjU4IEFNOzI7MjcxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="1"/>
+            <input variable="i"/>
+            <while expression="n&lt;=i">
+                <output expression="n" newline="True"/>
+                <assign variable="n" expression="n+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

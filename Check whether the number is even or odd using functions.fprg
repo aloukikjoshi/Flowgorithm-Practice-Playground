@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ankit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-31 09:46:32 PM"/>
+        <attribute name="created" value="YW5raXQ7TVNJOzIwMjMtMDEtMzA7MTI6MDY6MzQgQU07MjAyNA=="/>
+        <attribute name="edited" value="YW5raXQ7TVNJOzIwMjMtMDEtMzA7MTI6MTc6MjkgQU07MTsyMTM4"/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTMxOzA5OjQ2OjMyIFBNOzM7MjczNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number&quot;" newline="True"/>
+            <input variable="x"/>
+            <output expression="x&amp;&quot; is &quot;&amp;even(x)" newline="True"/>
+            <output expression="x&amp;&quot; is &quot;&amp;odd(x)" newline="True"/>
+        </body>
+    </function>
+    <function name="even" type="String" variable="a">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="a" type="String" array="False" size=""/>
+            <declare name="rem" type="Integer" array="False" size=""/>
+            <assign variable="rem" expression="x%2"/>
+            <if expression="rem==0">
+                <then>
+                    <assign variable="a" expression="&quot;even&quot;"/>
+                </then>
+                <else>
+                    <assign variable="a" expression="&quot;not even&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="odd" type="String" variable="b">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="b" type="String" array="False" size=""/>
+            <declare name="rem" type="Integer" array="False" size=""/>
+            <assign variable="rem" expression="x%2"/>
+            <if expression="rem==1">
+                <then>
+                    <assign variable="b" expression="&quot;odd&quot;"/>
+                </then>
+                <else>
+                    <assign variable="b" expression="&quot;not odd&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-25 12:17:42 AM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTI0OzExOjE1OjQxIFBNOzI2MTY="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTI1OzEyOjE3OjQyIEFNOzI7MjcxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, remainder, size, index" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="32"/>
+            <declare name="a" type="Integer" array="True" size="size"/>
+            <output expression="&quot;Enter number&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="index" expression="0"/>
+            <while expression="number&gt;=1">
+                <assign variable="remainder" expression="number%2"/>
+                <assign variable="a[index]" expression="remainder"/>
+                <assign variable="number" expression="number/2"/>
+                <assign variable="index" expression="index+1"/>
+            </while>
+            <for variable="index" start="index-1" end="0" direction="dec" step="1">
+                <output expression="a[index]" newline="True"/>
+            </for>
+            <if expression="a[0]=0">
+                <then>
+                    <output expression="&quot;The number is even.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The number is odd.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ankit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-04 03:07:34 PM"/>
+        <attribute name="created" value="YW5raXQ7TVNJOzIwMjMtMDEtMDQ7MDI6NDk6NDAgUE07MjA0Mw=="/>
+        <attribute name="edited" value="YW5raXQ7TVNJOzIwMjMtMDEtMDQ7MDM6MDc6MzQgUE07MTsyMTQ5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter number&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="prime" type="Boolean" array="False" size=""/>
+            <assign variable="prime" expression="true"/>
+            <for variable="c" start="2" end="n-1" direction="inc" step="1">
+                <if expression="n%c==0">
+                    <then>
+                        <assign variable="prime" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="prime" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-07 09:44:27 AM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNzswOToyMjo0OSBBTTsyNzI3"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNzswOTo0NDoyNyBBTTsxOzI4MzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="4" direction="inc" step="4">
+                <output expression="i" newline="True"/>
+                <assign variable="i" expression="22"/>
+                <output expression="i" newline="True"/>
+                <assign variable="i" expression="333"/>
+                <output expression="i" newline="True"/>
+                <assign variable="i" expression="4444"/>
+                <output expression="i" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

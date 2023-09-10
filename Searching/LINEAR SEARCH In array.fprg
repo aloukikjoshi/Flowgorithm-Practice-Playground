@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="prajw"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 11:37:29 AM"/>
+        <attribute name="created" value="cHJhanc7REVTS1RPUC00RERWTks2OzIwMjMtMDEtMDk7MDY6MzQ6MjAgUE07Mjg4OA=="/>
+        <attribute name="edited" value="cHJhanc7REVTS1RPUC00RERWTks2OzIwMjMtMDEtMTE7MDM6MDI6MjQgUE07MjsyOTg2"/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTE3OzExOjM3OjI5IEFNOzQ7MjcyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, key, m" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of array.&quot;" newline="True"/>
+            <input variable="m"/>
+            <declare name="a" type="Integer" array="True" size="m"/>
+            <output expression="&quot;ENTER NUMBERS IN ARRAY&quot;" newline="True"/>
+            <for variable="i" start="0" end="m-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;ENTER NUMBER TO BE CHECKED&quot;" newline="True"/>
+            <input variable="key"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;=(m-1)">
+                <if expression="a[i]==key">
+                    <then>
+                        <output expression="&quot;THE NUMBER IS PRESENT IN THE ARRAY&quot;" newline="True"/>
+                        <output expression="&quot;THE ADDRESS IS a[&quot;&amp;i&amp;&quot;]&quot;" newline="True"/>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="&quot;THE NUMBER IS NOT PRESENT IN THE ARRAY&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

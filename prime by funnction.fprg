@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-21 10:47:52 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTIxOzAzOjU4OjA1IFBNOzI2MjE="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTIxOzEwOjQ3OjUyIFBNOzE7MjcyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number to be checked&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="n&amp;&quot; is &quot;&amp;prime(n)" newline="True"/>
+        </body>
+    </function>
+    <function name="prime" type="Boolean" variable="p">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="p" type="Boolean" array="False" size=""/>
+            <declare name="i, c" type="Integer" array="False" size=""/>
+            <for variable="i" start="2" end="n-1" direction="inc" step="1">
+                <assign variable="c" expression="n%i"/>
+                <if expression="c==0">
+                    <then>
+                        <assign variable="p" expression="False"/>
+                        <assign variable="i" expression="n"/>
+                    </then>
+                    <else>
+                        <assign variable="p" expression="true"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

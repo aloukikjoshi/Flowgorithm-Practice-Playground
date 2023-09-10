@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 01:14:47 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTAxOzAyOjExOjI3IFBNOzI2MTI="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTE3OzAxOjE0OjQ3IFBNOzI7MjczMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, n, x" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter array size&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <output expression="&quot;Enter elements of array&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <for variable="j" start="i" end="1" direction="dec" step="1">
+                    <if expression="a[j-1]&gt;a[j]">
+                        <then>
+                            <assign variable="x" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[j-1]"/>
+                            <assign variable="a[j-1]" expression="x"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Array elements in ascending order are&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ankit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-22 12:42:17 PM"/>
+        <attribute name="created" value="YW5raXQ7TVNJOzIwMjMtMDItMTQ7MTI6MDY6MjUgUE07MjA0Mg=="/>
+        <attribute name="edited" value="YW5raXQ7TVNJOzIwMjMtMDItMjI7MTI6NDI6MTcgUE07NzsyMTU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, z, xy, yz, zx" type="Real" array="False" size=""/>
+            <declare name="a" type="String" array="True" size="3"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="a[i]" expression="&quot;cricket&quot;"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="a[i]" expression="&quot;football&quot;"/>
+            <assign variable="i" expression="2"/>
+            <assign variable="a[i]" expression="&quot;basketball&quot;"/>
+            <output expression="&quot;select sport: 1-cricket, 2-football, 3-basketball&quot;" newline="True"/>
+            <input variable="i"/>
+            <output expression="a[i-1]" newline="True"/>
+            <declare name="b" type="String" array="True" size="3"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="0"/>
+            <assign variable="b[j]" expression="&quot;IPL&quot;"/>
+            <assign variable="j" expression="1"/>
+            <assign variable="b[j]" expression="&quot;La Liga&quot;"/>
+            <assign variable="j" expression="2"/>
+            <assign variable="b[j]" expression="&quot;NBL&quot;"/>
+            <output expression="&quot;select league: 1-IPL, 2-La Liga, 3-NBL&quot;" newline="True"/>
+            <input variable="j"/>
+            <output expression="b[j-1]" newline="True"/>
+            <if expression="i=j">
+                <then>
+                    <if expression="i==1">
+                        <then>
+                            <output expression="&quot;point table&quot;" newline="True"/>
+                            <assign variable="x" expression="16"/>
+                            <output expression="&quot;MI &quot;&amp;x" newline="True"/>
+                            <assign variable="y" expression="14"/>
+                            <output expression="&quot;CSK &quot;&amp;y" newline="True"/>
+                            <assign variable="z" expression="18"/>
+                            <output expression="&quot;GT &quot;&amp;z" newline="True"/>
+                            <if expression="x&gt;y &amp;&amp; x&gt;z">
+                                <then>
+                                    <output expression="&quot;table topper is MI&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="y&gt;z &amp;&amp; y&gt;x">
+                                        <then>
+                                            <output expression="&quot;table topper is CSK&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;table topper is GT&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                            <output expression="&quot;top scorer&quot;" newline="True"/>
+                            <assign variable="xy" expression="632"/>
+                            <output expression="&quot;virat kohli &quot;&amp;xy" newline="True"/>
+                            <assign variable="yz" expression="530"/>
+                            <output expression="&quot;david warner &quot;&amp;yz" newline="True"/>
+                            <assign variable="zx" expression="492"/>
+                            <output expression="&quot;rohit sharma &quot;&amp;zx" newline="True"/>
+                            <if expression="xy&gt;yz &amp;&amp; xy&gt;zx">
+                                <then>
+                                    <output expression="&quot;virat kohli is leading run scorer&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="yz&gt;xy and yz&gt;zx">
+                                        <then>
+                                            <output expression="&quot;david warner is leading run scorer&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;rohit sharma is leading run scorer&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="i==2">
+                                <then>
+                                    <output expression="&quot;point table&quot;" newline="True"/>
+                                    <assign variable="x" expression="56"/>
+                                    <output expression="&quot;Barcelona &quot;&amp;x" newline="True"/>
+                                    <assign variable="y" expression="45"/>
+                                    <output expression="&quot;real madrid &quot;&amp;y" newline="True"/>
+                                    <assign variable="z" expression="42"/>
+                                    <output expression="&quot;Real sociedad &quot;&amp;z" newline="True"/>
+                                    <if expression="x&gt;y &amp;&amp; x&gt;z">
+                                        <then>
+                                            <output expression="&quot;table topper is barcelona&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="y&gt;z &amp;&amp; y&gt;x">
+                                                <then>
+                                                    <output expression="&quot;table topper is real madrid&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;table topper is real sociedad&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                    <output expression="&quot;top goaler&quot;" newline="True"/>
+                                    <assign variable="xy" expression="13"/>
+                                    <output expression="&quot;R. lewandowski &quot;&amp;xy" newline="True"/>
+                                    <assign variable="yz" expression="11"/>
+                                    <output expression="&quot;joselu &quot;&amp;yz" newline="True"/>
+                                    <assign variable="zx" expression="9"/>
+                                    <output expression="&quot;k. benzema &quot;&amp;zx" newline="True"/>
+                                    <if expression="xy&gt;yz &amp;&amp; xy&gt;zx">
+                                        <then>
+                                            <output expression="&quot;r. lewandoski is leading goal scorer&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="yz&gt;xy and yz&gt;zx">
+                                                <then>
+                                                    <output expression="&quot;joselu is leading goal scorer&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;k. benzema is leading goal scorer&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="i==3">
+                                        <then>
+                                            <output expression="&quot;PPG table&quot;" newline="True"/>
+                                            <assign variable="x" expression="117.6"/>
+                                            <output expression="&quot;boston &quot;&amp;x" newline="True"/>
+                                            <assign variable="y" expression="114.6"/>
+                                            <output expression="&quot;milwaukee &quot;&amp;y" newline="True"/>
+                                            <assign variable="z" expression="114.3"/>
+                                            <output expression="&quot;philadelphia &quot;&amp;z" newline="True"/>
+                                            <if expression="x&gt;y &amp;&amp; x&gt;z">
+                                                <then>
+                                                    <output expression="&quot;table topper is boston&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="y&gt;z &amp;&amp; y&gt;x">
+                                                        <then>
+                                                            <output expression="&quot;table topper is milwaukee&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;table topper is philadelphia&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                            <output expression="&quot;top PPG&quot;" newline="True"/>
+                                            <assign variable="xy" expression="33.2"/>
+                                            <output expression="&quot;l. doncic &quot;&amp;xy" newline="True"/>
+                                            <assign variable="yz" expression="33.1"/>
+                                            <output expression="&quot;j. embiid &quot;&amp;yz" newline="True"/>
+                                            <assign variable="zx" expression="32.4"/>
+                                            <output expression="&quot;G. Antetokounmpo &quot;&amp;zx" newline="True"/>
+                                            <if expression="xy&gt;yz &amp;&amp; xy&gt;zx">
+                                                <then>
+                                                    <output expression="&quot;l. doncic is leading pointer&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="yz&gt;xy &amp;&amp; yz&gt;zx">
+                                                        <then>
+                                                            <output expression="&quot;j. embiid is pointer&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;G. Antetokounmpo is pointer&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;invalid match&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

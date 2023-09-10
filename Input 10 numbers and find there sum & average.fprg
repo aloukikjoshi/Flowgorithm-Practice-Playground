@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 10:15:10 AM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNjswMzo0MjozOCBQTTsyNzM1"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNjswMzo1MToyMSBQTTsxOzI4MzU="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAyLTE3OzEwOjE1OjEwIEFNOzI7MjcwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, e, f, g, h, i, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;First ten numbers from keyboard are&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <input variable="d"/>
+            <input variable="e"/>
+            <input variable="f"/>
+            <input variable="g"/>
+            <input variable="h"/>
+            <input variable="i"/>
+            <input variable="j"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="a+b+c+d+e+f+g+h+i+j"/>
+            <output expression="&quot;There sum is&quot;&amp;sum" newline="True"/>
+            <assign variable="average" expression="sum/10"/>
+            <output expression="&quot;The average is&quot;&amp;average" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

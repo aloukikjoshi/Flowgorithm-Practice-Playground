@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-06 04:07:54 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNjswMzo1NDozOSBQTTsyNzM5"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJIS0o4VUw7MjAyMi0xMi0wNjswNDowNzo1NCBQTTsxOzI4NDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, sum" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="i" newline="True"/>
+                <assign variable="sum" expression="sum+i"/>
+            </for>
+            <output expression="&quot;The sum of first ten natural numbers is&quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

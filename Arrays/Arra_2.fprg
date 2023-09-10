@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-09 03:57:25 PM"/>
+        <attribute name="created" value="dXNlcjtERVNLVE9QLUhOOURNREg7MjAyMy0wMS0wOTswMjo0MzoyNyBQTTsyODAx"/>
+        <attribute name="edited" value="dXNlcjtERVNLVE9QLUhOOURNREg7MjAyMy0wMS0wOTswMzo1NzoyNSBQTTsxOzI5MTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="50"/>
+            <declare name="i, sum, n" type="Integer" array="False" size=""/>
+            <declare name="Avrg, std" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the value of n , which is &lt;50&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Enter the values of the array&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <assign variable="sum" expression="a[0]"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <assign variable="sum" expression="sum+a[i]"/>
+            </for>
+            <output expression="sum" newline="True"/>
+            <assign variable="Avrg" expression="sum/n"/>
+            <output expression="Avrg" newline="True"/>
+            <assign variable="std" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="std" expression="std+ (a[i]-Avrg)*(a[i]-Avrg)"/>
+            </for>
+            <output expression="&quot;Std iss &quot; &amp;std" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

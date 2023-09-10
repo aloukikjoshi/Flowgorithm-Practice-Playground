@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-24 11:00:25 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTI0OzEwOjU0OjA3IFBNOzI2MjA="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTI0OzEwOjU5OjE0IFBNOzU7cHJhanc7REVTS1RPUC00RERWTks2OzIwMjMtMDEtMjE7MDM6NTM6NDkgUE07YXZnZXJhZ2Ugb2YgZWxlbWVudHMgaW4gYXJyYXkgW2Z1bmN0aW9uIGNhbGxdWzFdLmZwcmc7MTA3Nzg="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTI0OzExOjAwOjI1IFBNOzE7MjcyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER NUMBER OF EMPLOYEES&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <output expression="&quot;ENTER SALARIES OF EMPLOYEES&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;AVERAGE SALARY IS &quot;&amp;average(a,n)" newline="True"/>
+            <output expression="&quot;MINIMUM SALARY IS &quot;&amp;minimum(a,n)" newline="True"/>
+            <output expression="&quot;MAXIMUM SALARY IS &quot;&amp;maximum(a,n)" newline="True"/>
+            <output expression="&quot;STANDARD DEVIATION=&quot;&amp;sd(a,n)" newline="True"/>
+        </body>
+    </function>
+    <function name="average" type="Real" variable="avg">
+        <parameters>
+            <parameter name="a" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <declare name="sum, i" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="sum" expression="sum+a[i]"/>
+            </for>
+            <assign variable="avg" expression="sum/n"/>
+        </body>
+    </function>
+    <function name="maximum" type="Integer" variable="max">
+        <parameters>
+            <parameter name="a" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, j, temp" type="Integer" array="False" size=""/>
+            <declare name="max" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="j" expression="i+1"/>
+                <while expression="j&lt;n">
+                    <if expression="a[i]&gt;a[j]">
+                        <then>
+                            <assign variable="temp" expression="a[i]"/>
+                            <assign variable="a[i]" expression="a[j]"/>
+                            <assign variable="a[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j+1"/>
+                </while>
+            </for>
+            <assign variable="max" expression="a[n-1]"/>
+        </body>
+    </function>
+    <function name="minimum" type="Integer" variable="min">
+        <parameters>
+            <parameter name="a" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, j, temp" type="Integer" array="False" size=""/>
+            <declare name="min" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="j" expression="i+1"/>
+                <while expression="j&lt;n">
+                    <if expression="a[i]&gt;a[j]">
+                        <then>
+                            <assign variable="temp" expression="a[i]"/>
+                            <assign variable="a[i]" expression="a[j]"/>
+                            <assign variable="a[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j+1"/>
+                </while>
+            </for>
+            <assign variable="min" expression="a[0]"/>
+        </body>
+    </function>
+    <function name="sd" type="Real" variable="sd">
+        <parameters>
+            <parameter name="a" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, sum" type="Integer" array="False" size=""/>
+            <declare name="Avrg, sd" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="a[0]"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <assign variable="sum" expression="sum+a[i]"/>
+            </for>
+            <assign variable="Avrg" expression="sum/n"/>
+            <assign variable="sd" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="sd" expression="sd+ (a[i]-Avrg)*(a[i]-Avrg)"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

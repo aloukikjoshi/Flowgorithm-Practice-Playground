@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aloukik"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-23 06:59:40 PM"/>
+        <attribute name="created" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTIzOzA2OjE3OjQ1IFBNOzI2MjU="/>
+        <attribute name="edited" value="QWxvdWtpaztTVEFSVExFUjsyMDIzLTAxLTIzOzA2OjU5OjQwIFBNOzE7MjczNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number1, number2, number3" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter first  number&quot;" newline="True"/>
+            <input variable="number1"/>
+            <output expression="&quot;Enter second number&quot;" newline="True"/>
+            <input variable="number2"/>
+            <output expression="&quot;Enter third number&quot;" newline="True"/>
+            <input variable="number3"/>
+            <if expression="number1&gt;number2&amp;&amp;number1&gt;number3">
+                <then>
+                    <output expression="number1&amp;&quot; has the highest value.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="number2&gt;number3">
+                        <then>
+                            <output expression="number2&amp;&quot; has tthe highest value.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="number1=number2&amp;&amp;number2=number3&amp;&amp;number1=number3">
+                                <then>
+                                    <output expression="&quot;All three numbers are equual&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="number3&amp;&quot; has the highest value.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
